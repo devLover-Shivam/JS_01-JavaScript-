@@ -13,7 +13,7 @@ let abcd = document.getElementById("abcd");
 console.dir(abcd);// to get all the details of the element
 console.log(abcd);
  */
-
+ 
 /* TO SELECT A ELEMENT USING ITS CLASS
 let abcd = document.getElementsByClassName("abcd");
 console.log(abcd) */
@@ -88,8 +88,73 @@ h2.classList.toggle("hulu") // agar hati hui hai koi class to toggle usko laga d
 
 
 
-//q1. select all list elements and print their text using a loop.
+//Q1. Select all list elements and print their text using a loop
+
 let lis = document.querySelectorAll("li");
-for(let i=0;i<lis.length;i++){
+
+for(let i = 0; i < lis.length; i++){
     console.log(lis[i].textContent);
 }
+
+/* Intuition:
+First collect all the <li> elements from the page, then visit each element one by one and print the text written inside it.
+
+Code Explanation:
+
+querySelectorAll("li") selects all list items and stores them in a NodeList.
+The for loop runs from index 0 to the last element.
+textContent extracts only the text inside each <li>.
+console.log() prints the text in the console. */
+
+//Q2. Add a highlight class to every even item in a list
+
+let li = document.querySelectorAll("ul li:nth-child(2n)");
+
+console.log(li);
+
+li.forEach(function(elem){
+    elem.classList.add("highlight");
+});
+
+/* Intuition:
+Instead of manually checking which items are even, CSS selector nth-child(2n) directly selects every even list item. Then a class is added to style them.
+
+Code Explanation:
+
+ul li:nth-child(2n) selects all even <li> elements inside a <ul>.
+forEach() loops through each selected element.
+classList.add("highlight") adds the highlight class to every even item.
+This is commonly used for alternating colors or emphasis in lists. */
+
+//Q3. Set the font size of all <p> elements to 18px using style
+let p = document.querySelectorAll("p");
+
+console.log(p);
+
+p.forEach(function(elm){
+    elm.classList.add("size");
+});
+
+/* Intuition:
+Select all paragraph elements and apply a common styling to each one so every paragraph gets the same font size.
+
+Code Explanation:
+
+querySelectorAll("p") selects all paragraph elements.
+forEach() iterates through every paragraph.
+classList.add("size") adds a CSS class named size.
+The actual font size (18px) should be defined inside CSS for the .size class.
+
+Example CSS:
+
+.size{
+    font-size: 18px;
+} */
+
+/* CONFUSION:
+
+innerHTML: This should generally be avoided if you only want to set text. It processes the content as HTML. For example, if you pass an `<i>` tag, it will render the text in italics.
+innerText and textContent: These properties are used for text manipulation. If you try to insert an HTML tag using these, the browser will display the literal tag (e.g., `<i>`) on the screen rather than rendering it as formatting.
+In short, innerHTML parses HTML content, while innerText and textContent treat the input strictly as plain text.
+And innerHTML is comparitively slower than the textContent process.
+*/
