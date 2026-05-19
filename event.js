@@ -11,8 +11,22 @@ Learning events and event handling is important because they make web pages INTE
 //KUCH SCREEN PAR HO AUR AAPKO REACTION DENA HO TO US WAQT AAPKO EVENT HANDLE KARNA AANA CHAHIYE!
 //EVENT MATLAB HOTA HAI KOI ACTION HUA(eg: click)
 //EVENT LISTENER KA MATLAB HAI AAPNE KOI ACTION KA REACTION DIYA.(eg:click hone par screen black se white ho gya)
-
+/* EVENT LISTENER : addEventListener("eventname",function(){})*/
 let h1 = document.querySelector("h1");
 h1.addEventListener("click",function(){
     h1.style.color = "Red";
-})
+});
+
+function dblclick(){
+    p1.style.color = "Grey";
+    p1.style.fontSize = "18px";
+    // Syntax: 'name duration timing-function delay iteration-count direction fill-mode'
+    p1.classList.add("animate-me");
+};
+
+let p1 = document.querySelector("p");
+p1.addEventListener("dblclick", dblclick);
+//Removing event listener:
+p1.removeEventListener("dblclick", dblclick);
+
+ 

@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* CSS */
+    .animate-me {
+    animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
 </head>
 <body>
 <h1>Shivam</h1>
+<p>Shivam is a gerat guy. he's trying to be consistent in this javascript tutorial.</p>
 <script src="event.js"></script>
 </body>
 </html>
