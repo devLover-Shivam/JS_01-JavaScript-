@@ -20,17 +20,24 @@
             }
         }
 
+        h3{
+            text-transform: capitalize;
+        }
+
     </style>
 </head>
 <body>
 <h1>Shivam</h1>
 <p>Shivam is a gerat guy. he's trying to be consistent in this javascript tutorial.</p>
 <input type="text" placeholder="name">
-<h3>Select Your Device</h3>
+<h3 id="device">Select Your Device</h3>
+<select >
+    <option selected disabled > Your Device</option> <!-- //this selected disabled attribute helps you to show a deafult value in the options menu but at the same time it isn't selected -->
 <option value="samsung">Samsung</option>
 <option value="apple">Apple</option>
-<option value="xiaomi"></option>
-<option value="nothing"></option>
+<option value="xiaomi">Xiaomi</option>
+<option value="nothing">Nothing</option>
+</select>
 <script src="event.js"></script>
 </body>
 </html>

@@ -41,6 +41,15 @@ input.addEventListener("input",function(details){
     }
 });
 
-//
+//CHANGE EVENT TAB CHALTA HAI JAB AAPKA KOI INPUT SELECT YA TEXTAREA ME KOI CHANGE HO JAAYE
 
+//now if we want to when the device is selected , our heading should be changed from "Select your device" to "Device Selected"
+let sel = document.querySelector("select");
+let device = document.querySelector("#device");
+
+sel.addEventListener("change",function (dets) {
+    //console.log(dets.target.value); --> this will print the value inside the options tag that we gave in our html file.
+    device.textContent = `${dets.target.value} device selected`
+
+})
  
