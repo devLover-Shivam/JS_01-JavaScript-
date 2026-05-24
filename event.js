@@ -27,6 +27,20 @@ function dblclick(){
 let p1 = document.querySelector("p");
 p1.addEventListener("dblclick", dblclick);
 //Removing event listener:
-p1.removeEventListener("dblclick", dblclick);
+/* p1.removeEventListener("dblclick", dblclick); */
+let input = document.querySelector("input");
+/* input.addEventListener("input",function(){
+    console.log("typed");
+}); */
+//if you want to print the details of what is getting typed inside the input box we can do that by passing it inside the function.
+input.addEventListener("input",function(details){
+    //console.log(details.data);//this ".data" prints the actual data that is being enterd into the inout field.
+    // for backspace this ".data" = "null" if we dont want to print that we can write the code in this way:
+    if(details.data != null){
+        console.log(details.data);
+    }
+});
+
+//
 
  
