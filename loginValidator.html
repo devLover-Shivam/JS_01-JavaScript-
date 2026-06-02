@@ -1,0 +1,132 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validator</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+        }
+
+        .container{
+            width: 350px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .container h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group{
+            margin-bottom: 18px;
+        }
+
+        .input-group label{
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .input-group input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .input-group input:focus{
+            border-color: royalblue;
+        }
+
+        small{
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: royalblue;
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: rgb(39, 83, 214);
+        }
+
+        #resultMessage{
+            display: none;
+            color: red;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>Login Form</h2>
+
+        <form id="form" autocomplete="off">
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+                <small id="emailError">Error</small>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <small id="passwordError">Error</small>
+            </div>
+
+            <button type="submit">Validate</button>
+
+        </form>
+
+        <div id="resultMessage">
+            There are errors!
+        </div>
+
+    </div>
+
+    <script src="loginValidator.js"></script>
+
+</body>
+</html>
+```
