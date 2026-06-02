@@ -1,0 +1,4 @@
+Forms are used to capture user input on a web page, such as email addresses or passwords. A key aspect of handling forms in JavaScript is managing the submission process, where the default browser behavior (reloading the page) must be stopped using event.preventDefault() . When interacting with these forms, you can retrieve the data entered by the user using the .value property specifically for input elements .
+
+Form Validation is the process of ensuring that the data entered into a form is correct before it is processed.This is commonly achieved using Regular Expressions (Regex), where a pattern is defined and tested against the user's input using the .test() method . Validation is often interactive, where the developer uses JavaScript to check the input and provides real-time feedback to the user—such as displaying success or error messages by manipulating the DOM—to indicate whether the provided information is valid or invalid.
+

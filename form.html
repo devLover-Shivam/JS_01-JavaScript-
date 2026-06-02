@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    small{
+        
+        color: red;
+        font-size: 12px;
+    }
+    #hide{
+        display: none;
+    }
+
+</style>
+<body>
+    <form >
+        <!-- <input required minlength="3" maxlength="10" id="name" type="text" placeholder="name" > -->
+         <!-- PATTERN ATTRIBUTE -->
+         <input pattern="[a-z]{3,8}" id="name" type="text" placeholder="name" > 
+        <div id="hide">
+            <br>
+            <small>Name > 2 Characters</small>
+        </div>
+        <br><br>
+        <input type="email" placeholder="email">
+        <br><br>
+        <input type="password" placeholder="password">
+        <br><br>
+        <select >
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="others">others</option>
+        </select>
+        <br><br>
+        <textarea placeholder="tell us about urself"></textarea>
+        <br><br>
+        <input type="submit">
+
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
