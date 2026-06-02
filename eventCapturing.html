@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Capturing</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            padding: 30px;
+            
+        }
+        
+        #main{
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            
+        }
+        #nav{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #444;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+            font-weight: 500px;
+        }
+        button{
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+
+            background-color: #888;
+        }
+        .lt{
+            text-decoration: line-through;
+        }
+        .a{
+            width: 80%;
+            height: 80%;
+            background-color: red;
+        }
+        .b{
+            width: 80%;
+            height: 80%;
+            background-color: green;
+        }
+        .c{
+            width: 80%;
+            height: 80%;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+<!--     <div id="main">
+        <div id="nav">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <button>Click and Follow Us</button>
+        </div>
+    </div> -->
+
+    <!-- <ul>
+            <li>Apple</li>
+            <li>Guava</li>
+            <li>Orange</li>
+            <li>Papaya</li>
+            <li>Watermelon</li>
+    </ul> -->
+
+    <div class="a">
+        <div class="b">
+            <div class="c">
+                <button >Click Me</button>
+            </div>
+        </div>
+    </div>
+    <script src="eventCapturing.js"></script>
+</body>
+</html>
