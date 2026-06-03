@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Download Progress</title>
+    <link rel="stylesheet" href="dProgress.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="icon">⬇</div>
+
+            <h2>Downloading File</h2>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="details">
+                <span id="percentage">0%</span>
+                <span id="speed">0 MB/s</span>
+            </div>
+
+            <p id="status">Preparing download...</p>
+        </div>
+    </div>
+    <script src="dProgress.js"></script>
+</body>
+</html>
