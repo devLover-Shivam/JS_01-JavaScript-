@@ -1,0 +1,11 @@
+The video discusses client-side storage mechanisms used to persist data in the browser. Here is the breakdown of how these technologies work according to the session:
+
+1. localStorage and sessionStorage
+Persistence: The speaker explains that localStorage is used to store data permanently in the browser, meaning it persists even after the browser window is closed or the page is refreshed .
+Storage Constraints: A fundamental rule mentioned is that these storage APIs are built to store strings only. If a developer attempts to store complex data types like arrays or objects directly, the data will not be preserved correctly .
+JSON Usage: To overcome the string-only limitation, the speaker highlights the necessity of using JSON.stringify to convert objects or arrays into a string format before saving them. Conversely, when retrieving the data, one must use JSON.parse to convert the string back into its original object or array format 
+
+2. Cookies
+Server-Side Communication: The video differentiates cookies from the storage APIs by noting that cookies are specifically designed to communicate with the server. When a browser sends a request to a server, any cookies set for that domain are automatically sent along with the request .
+Use Cases: The speaker explains that cookies are frequently used for maintaining user sessions (like storing login tokens) or tracking state information, such as checking if a user has been temporarily banned from a website .
+Implementation: Cookies are managed and set using the document.cookie property in JavaScript 
