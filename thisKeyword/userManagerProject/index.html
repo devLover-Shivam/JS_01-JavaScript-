@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Manager</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .form-container {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            margin-bottom: 40px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .user-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .user-form label {
+            font-weight: bold;
+            color: #cccccc;
+        }
+
+        .user-form input,
+        .user-form textarea {
+            width: 100%;
+            padding: 13px;
+            background-color: #111111;
+            color: #ffffff;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .user-form input::placeholder,
+        .user-form textarea::placeholder {
+            color: #777777;
+        }
+
+        .user-form input:focus,
+        .user-form textarea:focus {
+            border-color: #ffffff;
+        }
+
+        .user-form textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .submit-btn {
+            padding: 13px;
+            margin-top: 5px;
+            background-color: #ffffff;
+            color: #111111;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #dddddd;
+        }
+
+        .profiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .profile-card {
+            width: 250px;
+            background-color: #1a1a1a;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .profile-card h2 {
+            font-size: 21px;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .profile-card h3 {
+            font-size: 15px;
+            color: #999999;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .profile-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-container">
+
+            <h1>Create User Profile</h1>
+
+            <form class="user-form">
+
+                <label for="name">Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    placeholder="Enter your name"
+                >
+
+                <label for="role">Role</label>
+                <input 
+                    type="text" 
+                    id="role" 
+                    placeholder="Enter your role"
+                >
+
+                <label for="bio">Bio</label>
+                <textarea 
+                    id="bio" 
+                    placeholder="Write something about yourself..."
+                ></textarea>
+
+                <label for="photo">Photo URL</label>
+                <input 
+                    type="url" 
+                    id="photo" 
+                    placeholder="https://example.com/photo.jpg"
+                >
+
+                <button type="submit" class="submit-btn">
+                    Create Profile
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="profiles-container">
+            
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
