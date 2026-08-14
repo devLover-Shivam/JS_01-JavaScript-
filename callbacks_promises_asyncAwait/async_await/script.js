@@ -1,20 +1,19 @@
-//async sync
-
-// aisa code jo line by line chale wo hota hai sync code
-
-//aisa code jo jab chalne k liye ready ho jaae tab chale wo hai asynchronous(async)
-
-function task1() {
+let pr = new Promise(function(resolve,reject){
     setTimeout(() => {
-        console.log("Task 1 completed");
-    }, 2000);
-}//async function
+        let rn = Math.floor(Math.random()*10);
+        if(rn>5){
+            resolve(rn);
+        }else reject(rn);
+    }, 3000);
+})
 
-function task2() {
-    console.log("Task 2 completed");
-}//sync function
+async function abcd() {
+    try{
+        let val = await pr;
+        console.log("try block executed: "+val);
+    } catch (err){
+        console.log(err);
+    }
+}
 
-task1();
-task2();
-
-console.log("All tasks completed");
+abcd();
