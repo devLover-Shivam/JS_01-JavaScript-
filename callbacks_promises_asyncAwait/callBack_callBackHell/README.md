@@ -16,17 +16,6 @@ Because JavaScript is asynchronous, we often need a way to say:
 
 This is where **callbacks** come into the picture.
 
-This README explains:
-
-1. What a callback is
-2. How callbacks work
-3. How the provided code executes
-4. Why callbacks are useful
-5. What callback hell is
-6. Why callback hell happens
-7. Real-life applications
-8. Problems caused by callback hell
-9. How modern JavaScript solves callback hell
 
 ---
 
