@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading using Intersection Observer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <p>Scroll to see images load only when they enter the viewport ... </p>
+        <div class="spacer">
+            <img data-src="https://i.pinimg.com/736x/d2/04/d7/d204d7256977f11f733a7ddd73c92e5e.jpg" class="lazy-img" alt="Image 1">
+        </div>
+        <div class="spacer">
+            <img data-src="https://i.pinimg.com/736x/2d/b7/40/2db740b2086d2708186fa6704f392427.jpg" class="lazy-img" alt="Image 2">
+        </div>
+        <div class="spacer">
+            <img data-src="https://i.pinimg.com/736x/9f/cc/7e/9fcc7ef2e8f1a292bbdbd0c9dbd44c62.jpg" class="lazy-img" alt="Image 3">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
