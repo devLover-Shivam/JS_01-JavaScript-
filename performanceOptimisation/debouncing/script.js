@@ -85,3 +85,79 @@ input.addEventListener("input", debounce(function(){
 // delay = 1000ms
 // Matlab user ke last input ke 1 second baad "debounced" print hoga,
 // provided ki us 1 second ke andar user ne dobara input na diya ho.
+
+
+
+/* 
+
+...ARGS 
+
+`...args` ko samajhne se pehle ek important baat:
+
+Yahan `...args` ka use isliye kiya gaya hai taaki debounce function kisi bhi function ke arguments ko receive kar sake.
+
+Matlab agar future mein `fnc` ko 1, 2, ya multiple values deni ho, to debounce un values ko lose nahi karega.
+
+ `...args` ko REST PARAMETER kehte hain.
+ Jab function call hota hai, to jo bhi arguments pass kiye jaate hain,
+ `...args` un sabhi arguments ko collect karke ek ARRAY ke andar store kar leta hai.
+
+ Example:
+ function test(...args) {
+     console.log(args);
+ }
+
+ test(10, 20, 30);
+
+ Yahan:
+ args = [10, 20, 30]
+
+ Matlab `...args` ka matlab hai:
+ "Jitne bhi arguments function ko mil rahe hain, sabko collect karke `args` naam ke array mein rakh do."
+
+
+function debounce(fnc, delay){
+    let timer;
+
+    return function(...args){
+         Yahan `...args` current function call ke saare arguments ko receive kar raha hai.
+         Agar returned function ko koi argument milega,
+         to woh `args` array ke andar store ho jaayega.
+        
+         Example:
+         returnedFunction("hello", 100);
+        
+         to:
+         args = ["hello", 100]
+
+        clearTimeout(timer);
+
+         Agar user ne dobara action kiya,
+         to pehle wala timer cancel kar do.
+         Isse har naye action ke saath countdown dobara start hoga.
+
+        timer = setTimeout(() => {
+
+             Yahan `...args` REST PARAMETER nahi,
+             balki SPREAD OPERATOR ki tarah kaam kar raha hai.
+            
+             `args` ek array hai:
+             ["hello", 100]
+            
+             Lekin humein original function ko arguments individually dene hain:
+             fnc("hello", 100)
+            
+             Isliye `...args` array ko unpack karke individual arguments bana deta hai.
+            
+             args = ["hello", 100]
+             fnc(...args)
+             becomes:
+             fnc("hello", 100)
+
+            fnc(...args);
+
+        }, delay);
+    }
+}
+*/
+
